@@ -1,0 +1,15 @@
+n = int(input("Enter N: "))
+count = 0
+number = 2
+
+print("Prime numbers: ", end='')
+while count < n:
+    is_prime = True
+    for divisor in range(2, number):
+        if number % divisor == 0:
+            is_prime = False
+            break
+    if is_prime:
+        print(number, end=' ')
+        count += 1
+    number += 1
